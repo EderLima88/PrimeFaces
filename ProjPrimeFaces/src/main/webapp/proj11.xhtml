@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:head>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+<h:outputText value=" Meu componente JSF"/>
+<br></br>
+
+	<h:commandButton value="PrimeFaces 6"></h:commandButton>
+	
+
+	<p:accordionPanel>
+		<p:tab title="First Tab Title">
+			<h:outputText value="Lorem" />
+...Uso do recurso Accordion Panel com PrimeFaces 6 
+</p:tab>
+		<p:tab title="Second Tab Title">
+			<h:outputText value="Ipsum" />
+...Deve-se dar atenção a versão JSF ser compatível com primefaces, que pode ser até a versão 12
+</p:tab>
+		<p:tab title="Next Tab Title">
+			<h:outputText value="Atenção: " />
+Manual usado para saber quais seus componentes disponíveis no site primefaces
+</p:tab>
+	</p:accordionPanel>
+
+	<p:panel id="panel" header="Painel com arraste">
+		<br></br>
+		<p:commandButton value="Submit" />
+		<p:commandButton value="Disabled" disabled="true" />
+	</p:panel>
+	<p:draggable for="panel" />
+	
+<p:gmap center="-15.565986,-54.309782" zoom="15" type="HYBRID" style="width:600px;height:400px" />
+
+	<p:dock>
+		<p:menuitem value="Home" url="http://www.google.com.br"
+			icon="/img/goo.png" />
+		<p:menuitem value="Documentos" url="#" icon="/img/pin.png" />
+		<p:menuitem value="Musicas" url="#" icon="/img/hom.png" />
+		<p:menuitem value="Imagens" url="#" icon="/img/min.png" />
+		<p:menuitem value="Zip" url="#" icon="/img/ric.png" />
+	</p:dock>
+
+</h:body>
+</html>
